@@ -41,13 +41,17 @@ A modular, production-ready project architecture:
 
 ```text
 📦 berlin-bess-spatial-analysis
- ┣ 📂 data                  # Generated GeoJSON spatial databases
- ┣ 📂 outputs               # Static assets and map snapshots
+ ┣ 📂 data                  
+ ┃ ┗ 📜 berlin_grid_data.geojson  # Generated spatial database
+ ┣ 📂 outputs               
+ ┃ ┗ 🖼️ map_preview.png           # Static map snapshot
  ┣ 📂 src                   
- ┃ ┗ 📜 spatial_logic.py    # Core MCDA mathematics and normalization logic
+ ┃ ┣ 📜 __init__.py
+ ┃ ┗ 📜 spatial_logic.py          # Core MCDA mathematics 
  ┣ 📂 tests                 
- ┃ ┗ 📜 test_spatial.py     # Automated unit tests for logic validation
- ┣ 📜 app.py                # Main Streamlit dashboard application
- ┣ 📜 prepare_data.py       # Script for spatial grid and synthetic data generation
- ┣ 📜 requirements.txt      # Python dependencies
- ┗ 📜 README.md             # Project documentation
+ ┃ ┣ 📜 __init__.py
+ ┃ ┗ 📜 test_spatial.py           # Automated unit tests 
+ ┣ 📜 app.py                      # Main Streamlit dashboard
+ ┣ 📜 prepare_data.py             # Script for data generation
+ ┣ 📜 requirements.txt            # Python dependencies
+ ┗ 📜 README.md                   # Project documentation
